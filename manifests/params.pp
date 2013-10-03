@@ -15,11 +15,7 @@ class zookeeper::params {
  	$zookeeper_group = $::hostname ? {
 		default			=> "zoogroup",
 	}
-        
-	$servers = $::hostname ? {
-		default			=> ["zoo1", "zoo2", "zoo3"] 
-	}
- 
+         
 	$java_home = $::hostname ? {
 		default			=> "${java::params::java_base}/jdk${java::params::java_version}",
 	}
