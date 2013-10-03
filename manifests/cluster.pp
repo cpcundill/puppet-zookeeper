@@ -1,11 +1,12 @@
 # /etc/puppet/modules/zookeeper/manifests/master.pp
 
-class zookeeper::cluster ($server_id) {
+class zookeeper::cluster ($server_id, $servers) {
 
     require zookeeper::params
 
     class {'zookeeper':
         server_id => $server_id,
+        servers => $servers
     }
 
     exec { "Launch zookeeper":
