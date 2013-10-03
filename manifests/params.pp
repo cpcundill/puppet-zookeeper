@@ -9,15 +9,15 @@ class zookeeper::params {
 	}
 
  	$zookeeper_user = $::hostname ? {
-		default			=> "hduser",
+		default			=> "zookeeper",
 	}
  
  	$zookeeper_group = $::hostname ? {
-		default			=> "hadoop",
+		default			=> "zoogroup",
 	}
         
 	$servers = $::hostname ? {
-		default			=> ["server1", "server2", "server3"] 
+		default			=> ["zoo1", "zoo2", "zoo3"] 
 	}
  
 	$java_home = $::hostname ? {

@@ -30,5 +30,3 @@ After installing this module in puppet master node, in site.pp, defining:
 
 Downloading Apache Zookeeper package and putting the file under 'files' subdir of this module.
 
-Please also modify parameters such as 'servers' in manifests/params.pp.
-

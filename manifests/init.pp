@@ -1,8 +1,10 @@
 # /etc/puppet/modules/zookeeper/manafests/init.pp
 
-class zookeeper ($server_id) {
+class zookeeper ($server_id, $servers) {
 
     require zookeeper::params
+
+    zookeeper::params::servers = $servers
 	
 	group { "${zookeeper::params::zookeeper_group}":
 		ensure => present,
